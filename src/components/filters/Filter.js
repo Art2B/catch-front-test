@@ -16,8 +16,10 @@ const FilterContainer = styled.ul`
 `
 
 const FiltersWrapper = styled.div`
+  transition: height 0.4s;
+  height: 80px;
   @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
-    height: ${props => props.open ? 'auto' : '0'};
+    height: ${props => props.open ? '80px' : '0'};
   }
 `
 
@@ -56,6 +58,7 @@ const FilterToggle = styled.div`
 
 const ToggleIcon = styled.img`
   margin-left: 30px;
+  transition: transform 0.4s;
   transform: ${props => props.open && `rotate(180deg)`};
 `
 
@@ -63,18 +66,19 @@ export default class Filters extends Component {
   constructor () {
     super()
     this.state = {
-      selectedFilter: 'all'
+      selectedFilter: 'all',
+      open: false
     }
   }
 
   render () {
     return (
       <FilterContainer>
-        <FilterToggle>
+        <FilterToggle onClick={() => this.setState({open: !this.state.open})}>
           Show Filters
-          <ToggleIcon src={arrowIcon} width="14px" height="14px"/>
+          <ToggleIcon src={arrowIcon} open={this.state.open} width="14px" height="14px"/>
         </FilterToggle>
-        <FiltersWrapper>
+        <FiltersWrapper open={this.state.open}>
           { dataFilters.map(filter => (
             <FilterItem 
               active={filter === this.state.selectedFilter}
