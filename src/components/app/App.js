@@ -6,6 +6,9 @@ import Header from 'components/header'
 
 const AppWrapper = styled.div`
   width: 100%;
+  max-width: ${props => props.theme.wrapper.maxWidth};
+  background-color: ${props => props.theme.wrapper.bgColor};
+  margin: auto;
   display: flex;
   flex: 1;
   flex-direction: column;
