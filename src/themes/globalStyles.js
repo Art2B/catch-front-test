@@ -5,8 +5,6 @@ import OmnesExtraLight from 'assets/fonts/omnes_extralight-webfont.woff'
 import OmnesLight from 'assets/fonts/omnes_light-webfont.woff'
 import OmnesMedium from 'assets/fonts/omnes_medium-webfont.woff'
 
-import theme from './index.js'
-
 injectGlobal`
   @font-face {
     font-family: 'Omnes';
@@ -63,6 +61,6 @@ injectGlobal`
 
   body {
     font-family: 'Omnes', sans-serif;
-    background-color: ${theme.bgColor};
+    background-color: #E4E7ED;
   }
 `

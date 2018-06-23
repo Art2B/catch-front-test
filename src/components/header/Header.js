@@ -4,8 +4,9 @@ import styled from 'styled-components'
 import logo from 'assets/catch-logo.svg'
 
 const Wrapper = styled.div`
+  margin: 30px 0;
   width: 100%;
-  border: 1px solid red
+  text-align: right;
 `
 
 const Header = ({}) => (

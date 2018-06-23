@@ -1,0 +1,1 @@
+export default ['all', 'websites', 'campaigns', 'content']
