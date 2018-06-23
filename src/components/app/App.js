@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import '../../themes/globalStyles'
 import Header from 'components/header'
 
 const AppWrapper = styled.div`

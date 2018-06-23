@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const Header = ({}) => (
   <Wrapper>
-    <img src={logo} />
+    <img src={logo} width="100" height="100"/>
   </Wrapper>
 )
 

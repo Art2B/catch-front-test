@@ -1,9 +1,11 @@
-import { injectGlobal } from 'styled-components';
-import OmnesRegular from './assets/fonts/omnes-regular-webfont.otf';
-import OmnesSemiBold from './assets/fonts/omnes-semibold-webfont.otf';
-import OmnesExtraLight from './assets/fonts/omnes-extralight-webfont.otf';
-import OmnesLight from './assets/fonts/omnes-light-webfont.otf';
-import OmnesMedium from './assets/fonts/omnes-medium-webfont.otf';
+import { injectGlobal } from 'styled-components'
+import OmnesRegular from 'assets/fonts/omnes-regular-webfont.woff'
+import OmnesSemiBold from 'assets/fonts/omnes-semibold-webfont.woff'
+import OmnesExtraLight from 'assets/fonts/omnes_extralight-webfont.woff'
+import OmnesLight from 'assets/fonts/omnes_light-webfont.woff'
+import OmnesMedium from 'assets/fonts/omnes_medium-webfont.woff'
+
+import theme from './index.js'
 
 injectGlobal`
   @font-face {
@@ -59,5 +61,6 @@ injectGlobal`
 
   body {
     font-family: 'Omnes', sans-serif;
+    background-color: ${theme.bgColor};
   }
-`;
+`
