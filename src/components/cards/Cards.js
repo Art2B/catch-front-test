@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // TODO: Change this to container
 import data from './../../data/cards'
 
-import Card from 'components/Card'
+import Card from 'components/card'
 
 const Wrapper = styled.div`
   width: 100%;

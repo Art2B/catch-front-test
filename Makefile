@@ -26,9 +26,13 @@ install: ##@install Install the project's dependeencies
 	@yarn install
 
 start: ##@start Start the project
+	@mkdir -p dist/assets
+	@cp -r src/assets/cards dist/assets/cards
 	@yarn start
 
 build:
+	@mkdir -p dist/assets
+	@cp -r src/assets/cards dist/assets/cards
 	@yarn build
 
 test: ##@test Run all the tests

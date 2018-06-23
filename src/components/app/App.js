@@ -5,8 +5,7 @@ import '../../themes/globalStyles'
 import Header from 'components/header'
 import Menu from 'components/menu'
 import Cards from 'components/cards'
-
-import dataFilters from './../../data/filters'
+import Filters from 'components/filters'
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -33,29 +32,13 @@ const PageTitle = styled.h1`
   color: ${props => props.theme.menu.activeTextColor};
 `
 
-const FilterWrapper = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-`
-const FilterItem = styled.li`
-  display: inline;
-  text-transform: uppercase;
-  margin: 0 50px 0 0;
-  color: ${props => props.theme.menu.textColor}
-`
-
 const App = ({}) => (
   <AppWrapper>
     <Header />
     <Menu />
     <PageInfos>
       <PageTitle>Work</PageTitle>
-      <FilterWrapper>
-        { dataFilters.map(filter => (
-          <FilterItem key={filter}>{filter}</FilterItem>
-        ))}
-      </FilterWrapper>
+      <Filters />
     </PageInfos>
     <Cards />
   </AppWrapper>

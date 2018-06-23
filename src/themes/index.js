@@ -6,7 +6,8 @@ export default {
   },
   menu: {
     textColor: '#C2C7CF',
-    activeTextColor: '#292626'
+    activeTextColor: '#292626',
+    activeBorderColor: '#3DC5EB'
   },
   cards: {
     textColor: '#FFFFFF',

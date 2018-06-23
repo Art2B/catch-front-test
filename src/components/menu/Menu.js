@@ -5,7 +5,7 @@ import menuIcon from 'assets/icon-menu.svg'
 
 const Container = styled.div`
   margin: 0;
-  background: black;
+  background: ${props => props.theme.menu.activeTextColor};
   height: 50px;
   width: 50px;
   position: absolute;
@@ -13,6 +13,7 @@ const Container = styled.div`
   left: 0;
   text-align: center;
   padding: 10px 0;
+  cursor: pointer;
 `
 
 const Menu = ({}) => (
