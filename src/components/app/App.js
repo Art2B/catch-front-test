@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Header from 'components/header'
+
 const AppWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -10,6 +12,7 @@ const AppWrapper = styled.div`
 
 const App = ({}) => (
   <AppWrapper>
+    <Header />
     <p>Put app here</p>
   </AppWrapper>
 )
