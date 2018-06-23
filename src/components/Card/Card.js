@@ -6,7 +6,8 @@ const getImagePath = path => {
   return `assets/cards/${path}`
 }
 
-const Container = styled.div`
+const Container = styled.a`
+  display: block;
   background-image: url(${props => props.imgPath});
   background-position: center;
   background-size: cover;
@@ -14,6 +15,8 @@ const Container = styled.div`
   flex-basis: 33%;
   padding: 20px;
   height: 280px;
+  color: inherit;
+  text-decoration: inherit;
 
   @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
     flex-basis: 100%;
@@ -36,7 +39,7 @@ const Client = styled.p`
 `
 
 const Card = ({ card }) => (
-  <Container imgPath={getImagePath(card.image)}>
+  <Container imgPath={getImagePath(card.image)} href="#0">
     <Title>{ card.title }</Title>
     <Client>{ card.client }</Client>
   </Container>

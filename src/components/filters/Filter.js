@@ -1,23 +1,18 @@
-
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import arrowIcon from 'assets/icon-chevron-down.svg'
 import dataFilters from './../../data/filters'
 
-let selectedFilter = 'all'
-
-const changeFilter = filter => {
-  selectedFilter = filter
-}
-
-
 const FilterContainer = styled.ul`
   margin: 0;
-  padding: 0;
+  padding: 0 0 12px 0;
   list-style-type: none;
   overflow: hidden;
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+  padding: 0;
+  }
 `
 
 const FiltersWrapper = styled.div`
@@ -64,24 +59,33 @@ const ToggleIcon = styled.img`
   transform: ${props => props.open && `rotate(180deg)`};
 `
 
-const Filters = ({ }) => (
-  <FilterContainer>
-    <FilterToggle>
-      Show Filters
-      <ToggleIcon src={arrowIcon} width="14px" height="14px"/>
-    </FilterToggle>
-    <FiltersWrapper>
-      { dataFilters.map(filter => (
-        <FilterItem 
-          active={filter === selectedFilter}
-          key={filter}
-          onClick={() => changeFilter(filter)}
-        >
-          {filter}
-        </FilterItem>
-      ))}
-    </FiltersWrapper>
-  </FilterContainer>
-)
+export default class Filters extends Component {
+  constructor () {
+    super()
+    this.state = {
+      selectedFilter: 'all'
+    }
+  }
 
-export default Filters
+  render () {
+    return (
+      <FilterContainer>
+        <FilterToggle>
+          Show Filters
+          <ToggleIcon src={arrowIcon} width="14px" height="14px"/>
+        </FilterToggle>
+        <FiltersWrapper>
+          { dataFilters.map(filter => (
+            <FilterItem 
+              active={filter === this.state.selectedFilter}
+              key={filter}
+              onClick={() => this.setState({selectedFilter: filter})}
+            >
+              {filter}
+            </FilterItem>
+          ))}
+        </FiltersWrapper>
+      </FilterContainer>
+    )
+  }
+}
