@@ -4,3 +4,4 @@ yarn-error.log
 
 # Dist files
 dist/
+.cache

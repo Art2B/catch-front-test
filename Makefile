@@ -1,4 +1,4 @@
-.PHONY: install start test
+.PHONY: install start build test
 .DEFAULT_GOAL := help
 
 # COLORS

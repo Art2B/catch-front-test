@@ -12,6 +12,14 @@
   "author": "Art2B",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-react-app": "^3.1.1",
     "parcel-bundler": "^1.9.2"
+  },
+  "dependencies": {
+    "app": "^0.1.0",
+    "normalize.css": "^8.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.3"
   }
 }
