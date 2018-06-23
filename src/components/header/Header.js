@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   margin: 30px 0;
   width: 100%;
   text-align: right;
+
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+    margin: 15px 0;
+  }
 `
 
 const Header = ({}) => (

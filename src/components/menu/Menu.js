@@ -14,6 +14,11 @@ const Container = styled.div`
   text-align: center;
   padding: 10px 0;
   cursor: pointer;
+
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+    top: 4%;
+    left: -5px;
+  }
 `
 
 const Menu = ({}) => (

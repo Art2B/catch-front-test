@@ -11,5 +11,8 @@ export default {
   },
   cards: {
     textColor: '#FFFFFF',
+  },
+  breakpoints: {
+    mobile: 768
   }
 }

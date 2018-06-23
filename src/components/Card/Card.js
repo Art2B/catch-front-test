@@ -14,6 +14,10 @@ const Container = styled.div`
   flex-basis: 33%;
   padding: 20px;
   height: 280px;
+
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+    flex-basis: 100%;
+  }
 `
 
 const Title = styled.h1`

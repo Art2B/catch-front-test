@@ -22,6 +22,10 @@ const AppWrapper = styled.div`
 const PageInfos = styled.div`
   padding: 0 10%;
   margin-bottom: 5%;
+
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+    padding: 0;
+  }
 `
 
 const PageTitle = styled.h1`
@@ -30,6 +34,10 @@ const PageTitle = styled.h1`
   font-size: 66px;
   letter-spacing: 5px;
   color: ${props => props.theme.menu.activeTextColor};
+
+  @media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+    margin-bottom: 10px;
+  }
 `
 
 const App = ({}) => (
